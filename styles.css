@@ -1,6 +1,6 @@
 /* Write styles here */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-body{
+*{
     font-family: 'Inter', sans-serif;
     margin: 0;
 }
@@ -29,39 +29,105 @@ header{
 .right p{
     cursor: pointer;
 }
-
-h1{
-    font-size: 80px;
-    font-weight: 400;
+.grid{
+    width: 70%;
+    height: 100vh;
+    margin: 2rem 2rem;
 }
-h3{
-    font-weight: 400;
-}
-.text{
-    margin: 3rem;
-}
-.buttons{
+.items{
+    /* border: 1px solid black; */
     display: flex;
+    width: 100%;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    padding: 1rem 0;
     gap: 1rem;
 }
-button{
-    padding: 0.4rem 2.5rem; 
-    cursor: pointer;   
-}
+.items .item {
+    border: 1px solid black;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
-img{
-    width: 65%;
-    height: 90%;
-    position: absolute;
-    top: 28%;
-    left: 35%;
-}
+  
+  .items .item img {
+    max-width: 100%;
+    min-width: 100%;
+  }
+  
+  .items .item .row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .items .item .info {
+    padding: 1rem;
+  }
+  
+  .items .item button {
+    width: 100%;
+    border-radius: none;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+  }
+  
+   .items .item .colors {
+    display: flex;
+    margin: 1rem 0;
+  }
+  
+   .items .item .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin: 0 5px;
+  }
 
-#login{
+  .checkout-list{
+    overflow-y: auto;
+    max-height: 80vh;
+    min-width: 300px;
     background-color: black;
     color: white;
-}
-#signup{
+    position: absolute;
+    top: 20%;
+    left: 72%;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .checkout-list h3{
+    font-weight: 400;
+    text-align: center;
+    margin: 1rem 0;
+    
+  }
+
+  .list-item{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #checkout{
     background-color: white;
     color: black;
-}
+    padding: 0.5rem 2rem;
+    margin-left: 5rem;
+    margin-top: 1rem;
+  }
+  
+  
